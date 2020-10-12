@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>My Profile</title>
+</head>
+
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .progress {
+            display: flex;
+            flex-direction: column;
+            overflow: visible;
+        }
+        
+        .course {
+            height: 15px;
+        }
+        
+        progress[value] {
+            color: coral;
+        }
+        
+        progress {
+            background-color: yellow;
+            color: burlywood;
+        }
+        
+        label {
+            line-height: 3;
+            margin-right: 20px
+        }
+        
+        nav {
+            background: rgb(0, 119, 255);
+        }
+        
+        nav a {
+            text-decoration: none;
+            font-family: sans-serif;
+            font-size: 2rem;
+            padding: 25px 20px;
+            margin-right: 40px;
+            text-align: center;
+            color: #fff;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        
+        nav a:hover {
+            text-decoration: none;
+            color: #fff;
+            background: black;
+        }
+        
+        h2,
+        h1 {
+            text-align: left;
+        }
+        
+        @media (max-width:400px) {
+            nav {
+                max-width: 100%;
+                margin-bottom: 1rem;
+            }
+            nav a {
+                text-decoration: none;
+                font-family: sans-serif;
+                font-size: 12px;
+                padding: 6px 6px;
+                margin-right: 05px;
+                text-align: center;
+                color: #fff;
+                font-weight: bold;
+                width: 100%;
+                font-weight: bolder
+            }
+            h1 {
+                width: 100%;
+                font-size: 20px;
+                text-align: center;
+            }
+            h2 {
+                font-size: 1.1rem;
+                margin: 12px;
+                background: cornflowerblue;
+                padding: 10px;
+                border-radius: 5px;
+                color: #fff;
+                box-shadow: 3px 5px 4px black;
+            }
+            .progress-box,
+            details {
+                margin-left: 40px;
+            }
+            progress {
+                width: 80%
+            }
+            summary:focus {
+                outline: none;
+            }
+            img {
+                margin-left: 50px
+            }
+            img:hover {
+                transition: all 2s ease-in-out;
+                transform: scale(1.1);
+            }
+        }
+    </style>
+    <!-- <div id="main" style=" box-sizing:   border-box; display:  flex; align-items:center; justify-content: center; "> -->
+    <div id="container">
+        <div>
+            <!-- style="align-self: center;box-shadow: 2px 3px 4px grey; background: cornsilk; padding: 50px; -->
+            <nav style="color: cadetblue; position: relative; left: 0; top: 0;">
+                <div style="display: flex; justify-content: center;">
+
+                    <a href="#favorite food">Favorite Foods</a>
+                    <a href="#achievement">Achievement</a>
+                    <a href="#more about me">More About Me</a>
+                </div>
+            </nav>
+
+
+
+            <!-- 
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>                        
+                    </button>
+                        <a class="navbar-brand" href="#">Omowunmi</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Favorite Foods</a></li>
+                                    <li><a href="#">Achievement</a></li>
+                                    <li><a href="#">More About Me</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Page 2</a></li>
+                            <li><a href="#">Page 3</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav> -->
+            <marquee style="font-size: 20px; color: darkblue;"> Welcome to My Page</marquee>
+            <h1 id="name" style="font-family: sans-serif;font-weight: 900;">AISHAH TAJUDEEN</h1>
+            <img src="/aisha.jpeg" style=" width:200px; height: 200px; border-radius: 50%;align-items: center;border:10px dashed cornflowerblue" alt=" myself ">
+            <h2 style="text-align:left " id="favorite food ">Favorite Foods</h2>
+            <ul style="margin-left: 20px; ">
+                <li>Amala</li>
+                <li>Eba</li>
+                <li>Rice and Beans</li>
+                <li>Egusi and Semo</li>
+
+            </ul>
+            <h2 id="achievement ">Achievements</h2>
+            <div class="progress-box ">
+                <div>
+                    <label for="course "> Progress in this course(100%)</label>
+                    <progress style="width: 80%; " class=" " value="100" max="100 "> 100% </progress>
+                </div>
+                <div>
+                    <label for="Specialization Capstone "> Specialization  Capstone(20%)</label>
+                    <progress class="course " value="20" max="100"> 20% </progress>
+                </div>
+                <div>
+                    <label for="Specialization Capstone "> progress In life(67%):</label>
+                    <progress class="course " value="67" style="color: red;" aria-label="67" max="100">67%</progress>
+
+                </div>
+            </div>
+            <h2>More About Me</h2>
+            <details>
+                <summary style="color: darkblue; font-size:1rem; width: 150px; ">My Childhood</summary>
+                <p style="text-align: left; margin-right: 5px; ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit culpa minima voluptatem sed tenetur non quia quod neque! Nemo ad minima provident quod perferendis labore, corporis quaerat error quisquam necessitatibus et tempora, neque similique
+                    aspernatur deserunt iusto aperiam sed, obcaecati ratione recusandae! Aliquam laboriosam aspernatur natus repudiandae reprehenderit in voluptatem?
+                </p>
+            </details>
+
+
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js " integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js " integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV " crossorigin="anonymous "></script>
+</body>
+
+</html>
