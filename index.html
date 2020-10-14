@@ -12,7 +12,7 @@
     <title>My Profile</title>
 </head>
 
-<body>
+<body id="body">
     <style>
         * {
             box-sizing: border-box;
@@ -79,6 +79,11 @@
         
         progress[value] {
             color: coral;
+            background-color: yellow;
+        }
+        
+        progress[min] {
+            background-color: wheat
         }
         
         progress {
@@ -126,7 +131,7 @@
             nav a {
                 text-decoration: none;
                 font-family: sans-serif;
-                font-size: 18px;
+                font-size: 16px;
                 padding: 18px 20px;
                 text-align: center;
                 color: #fff;
@@ -147,7 +152,7 @@
                 background: cornflowerblue;
                 padding: 10px;
                 border-radius: 5px;
-                color: #fff;
+                color: inherit;
                 box-shadow: 3px 5px 4px black;
             }
             marquee {
@@ -168,15 +173,20 @@
                 width: 200px;
                 display: flex;
                 margin: auto;
+                padding-top: 11px;
             }
             img:hover {
                 transition: all 2s ease-in-out;
                 transform: scale(1.1);
             }
+            .color {
+                position: relative;
+                top: 80px;
+            }
         }
     </style>
     <!-- <div id="main" style=" box-sizing:   border-box; display:  flex; align-items:center; justify-content: center; "> -->
-    <div id="container">
+    <div id="container" style="">
         <div>
 
 
@@ -184,7 +194,7 @@
 
             <nav class="navbar navbar-expand-md  navbar-dark fixed-top align-content-center  ">
                 <!-- Brand -->
-                <a class="navbar-brand" href="#">OMOWUNMI</a>
+                <a class="navbar-brand navbar-dark" href="#">OMOWUNMI</a>
 
                 <!-- Toggler/collapsibe Button -->
                 <button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -194,24 +204,38 @@
                 <!-- Navbar links -->
                 <div class="collapse navbar-collapse " id="collapsibleNavbar">
                     <ul class="navbar-nav align-items-center" id="changeWidth">
-                        <a class="nav-link " href="#favorite food">Favorite Foods</a>
+                        <a class="nav-link " href="#favoritfood">Favorite Foods</a>
 
 
                         <a class="nav-link" href="#achievement">Achievement</a>
 
-                        <a class="nav-link" href="#More About Me">More About Me</a>
+                        <a class="nav-link" href="#MoreAboutMe">More About Me</a>
 
                         <a class="nav-link" href="tel:+08101273434">Contact Me</a>
 
                     </ul>
                 </div>
             </nav>
+            <h4 style="font-size: 16px;font-family: sans-serif;text-align: left;color: cornflowerblue;position: relative;top: 80px;">Please select your choice of Color and Font size</h4>
+
+            <div style="display: flex; gap:10px ;margin:0 20px">
+                <input onblur="colorSelect()" class="color" style="height:50px; width: 40%; " type="color" name="color" id="colortype">
+                <input onblur="colormainSelect()" class="color" style="height:50px; width: 40%; " type="color" name="color" id="colortypes">
 
 
-            <marquee style="font-size: 20px; color: darkblue;"> Welcome to My Page</marquee>
-            <h1 id="name" style="font-family: sans-serif;font-weight: 900;">AISHAH TAJUDEEN</h1>
-            <img src="aisha.jpeg" style=" width:200px; height: 200px; border-radius: 50%; align-items: center;border:10px dashed cornflowerblue" alt=" myself ">
-            <h2 style="text-align:left ;display: flex" id="favorite food ">Favorite Foods</h2>
+                <select onblur="fontSizes()" style="color: cornflowerblue;font-size: 16px; position: relative; height:50px; width: 40%;top: 80px;" id="selects">
+                <option value="25px ">Bolder</option>
+                <option value="20px ">Bold</option>
+                <option value="16px ">Normal</option>
+                <option value="12px ">Small</option>
+                <option value="8px ">smaller</option>
+               
+            </select>
+            </div>
+            <marquee style="font-size: 20px; color: darkblue; "> Welcome to My Page</marquee>
+            <h1 id="name " style="font-family: sans-serif;font-weight: 900; ">AISHAH TAJUDEEN</h1>
+            <img src="aisha.jpeg " style=" width:200px; height: 200px; border-radius: 50%; align-items: center;border:10px dashed cornflowerblue " alt=" myself ">
+            <h2 style="text-align:left ;display: flex " id="favoritefood ">Favorite Foods</h2>
             <ul style="margin-left: 20px; ">
                 <li>Amala</li>
                 <li>Eba</li>
@@ -219,25 +243,25 @@
                 <li>Egusi and Semo</li>
 
             </ul>
-            <h2 id="achievement ">Achievements</h2>
-            <div class="progress-box ">
+            <h2 id="achievement">Achievements</h2>
+            <section class="progress-box  ">
                 <div>
                     <label for="course "> Progress in this course(100%)</label>
-                    <progress style="width: 80%; " class=" " value="100" max="100 "> 100% </progress>
+                    <progress id="file" max="100" value="100"> 100% </progress>
                 </div>
                 <div>
                     <label for="Specialization Capstone "> Specialization  Capstone(20%)</label>
-                    <progress class="course " value="20" max="100"> 20% </progress>
+                    <progress id="file" max="100" value="20"> 20% </progress>
                 </div>
-                <div>
-                    <label for="Specialization Capstone "> progress In life(67%):</label>
-                    <progress class="course " value="67" style="color: red;" aria-label="67" max="100">67%</progress>
 
+                <div>
+                    <label for=" progress In life"> progress In life(67%):</label>
+                    <progress id="file" max="100" value="67"> 67% </progress>
                 </div>
-            </div>
-            <h2>More About Me</h2>
+            </section>
+            <h2 id="MoreAboutMe">More About Me</h2>
             <details>
-                <summary style="color: darkblue; font-size:1rem; width: 150px; ">My Childhood</summary>
+                <summary style="color: inherit; font-size:1rem; width: 150px; ">My Childhood</summary>
                 <p style="text-align: left; margin-right: 5px; ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit culpa minima voluptatem sed tenetur non quia quod neque! Nemo ad minima provident quod perferendis labore, corporis quaerat error quisquam necessitatibus et tempora, neque similique
                     aspernatur deserunt iusto aperiam sed, obcaecati ratione recusandae! Aliquam laboriosam aspernatur natus repudiandae reprehenderit in voluptatem?
                 </p>
@@ -246,6 +270,35 @@
 
         </div>
     </div>
+
+    <script>
+        // page = document.getElementByTagName("* ")
+        var pages = document.querySelector("*",
+            "h2 ")
+        var page = document.getElementById("body")
+        pages = pages.parentNode
+
+
+        function colorSelect() {
+
+            selectColor = document.getElementById("colortype").value
+            page.style.backgroundColor = selectColor;
+
+
+        }
+
+        function colormainSelect() {
+            selectColors = document.getElementById("colortypes").value
+            page.style.color = selectColors;
+        }
+
+        function fontSizes() {
+            selectFont = document.getElementById("selects").value
+
+            page.style.fontSize = selectFont
+
+        }
+    </script>
 
 
     <!-- Optional JavaScript -->
